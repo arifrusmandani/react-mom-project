@@ -68,7 +68,7 @@ export default function CreateFormMeeting() {
       shared_to: shared_to.split(',').map(item => item.trim()),
       category_code: category,
       summary: editorRef.current.getContent(),
-      time_and_date: dayjs(datetime).format('DD-MM-YYYY HH:MM'),
+      time_and_date: dayjs(datetime).format('DD-MM-YYYY HH:mm'),
       created_by: created_by
     }
     console.log(dataPayload)
