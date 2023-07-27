@@ -25,7 +25,6 @@ export default function CreateFormMeeting() {
   const [datetime, setDatetime] = useState("");
   const [shared_to, setSharedTo] = useState("");
   const [created_by, setCreatedBy] = useState("");
-  const [userLogin, setUserLogin] = React.useState({});
   
   const [categoryList, setCategoryList] = useState([]);
 
@@ -93,7 +92,6 @@ export default function CreateFormMeeting() {
     const userSession = Cookies.get('userSession');
     if (userSession){
       const userData = JSON.parse(userSession)
-      setUserLogin(userData)
       setCreatedBy(userData.name)
     }
     getDataCategoryList();

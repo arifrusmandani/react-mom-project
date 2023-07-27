@@ -88,8 +88,6 @@ export default function Navbar() {
   const updateOpen = useAppStore((state) => state.updateOpen);
   const dopen = useAppStore((state) => state.dopen);
   const [userLogin, setUserLogin] = React.useState({});
-  const [loading, setLoading] = React.useState(true);
-
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -176,7 +174,6 @@ export default function Navbar() {
     if(userSession){
       const userData = JSON.parse(userSession)
       setUserLogin(userData)
-      setLoading(false)
     }else{
       window.location.href = '/sign-in';
     }
