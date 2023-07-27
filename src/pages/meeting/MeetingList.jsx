@@ -29,7 +29,7 @@ export default function MeetingList() {
 
   const shouldIncludeItem = (item, user) => {
     const isPublicToUser = item.is_public === false && item.shared_to.includes(user.email);
-    const isCreatedByUser = item.created_by === user.name;
+    const isCreatedByUser = item.created_by === user.name || item.is_public === true;
     return isPublicToUser || isCreatedByUser;
   };
 
